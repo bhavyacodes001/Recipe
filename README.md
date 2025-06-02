@@ -23,11 +23,13 @@ A RESTful API for managing recipes built with Node.js, Express.js, and MongoDB.
    ```bash
    npm install
    ```
-3. Create a `.env` file in the root directory with the following variables:
-   ```
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/recipe-app
-   ```
+3. Environment Setup:
+   - Copy `.env.example` to `.env`
+   - Update the values in `.env` with your configuration:
+     ```
+     PORT=3001
+     MONGODB_URI=mongodb://localhost:27017/recipe-app
+     ```
 
 ## Running the Application
 
@@ -62,6 +64,29 @@ npm start
 
 ### Delete Recipe
 - **DELETE** `/api/recipes/:id`
+
+## Deployment
+
+The API is deployed on Render.com and can be accessed at:
+[Your Render URL will be here after deployment]
+
+### Local Development
+For local development, the API runs on `http://localhost:3001`
+
+### Production
+For production, use the deployed URL:
+[Your Render URL will be here after deployment]
+
+## Environment Variables
+
+The following environment variables are required:
+
+- `PORT`: The port number for the server (default: 3001)
+- `MONGODB_URI`: MongoDB connection string
+
+## Security Note
+
+Never commit your `.env` file to version control. The `.env.example` file is provided as a template for required environment variables.
 
 ## Postman Collection
 
